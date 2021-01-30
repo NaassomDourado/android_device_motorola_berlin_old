@@ -36,6 +36,7 @@ $(call inherit-product, vendor/gapps/config.mk)
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResBerlin \
+    LineageSystemUIBerlin \
     SystemUIResBerlin
 
 # Audio
