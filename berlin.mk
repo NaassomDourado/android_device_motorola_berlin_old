@@ -31,6 +31,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Inherit from motorola sm7325-common
 $(call inherit-product, device/motorola/sm7325-common/sm7325.mk)
 
+$(call inherit-product, vendor/gapps/config.mk)
+
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResBerlin \
