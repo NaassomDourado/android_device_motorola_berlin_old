@@ -19,10 +19,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from berlin device
-$(call inherit-product, device/motorola/berlin/device.mk)
+$(call inherit-product, device/motorola/berlin/berlin.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Sushi Bootanimation 
+SUSHI_BOOTANIMATION := 1080
+
+# Graphene Camera
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
+
+# Quick tap feature
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Chipset flag 
+RICE_CHIPSET := Snapdragon 778G
+# Gapps
+WITH_GMS := true
+
+export USE_CCACHE=1 
+
+# maintainer flag 
+RICE_MAINTAINER := NaassomDourado
 
 PRODUCT_NAME := lineage_berlin
 PRODUCT_DEVICE := berlin
@@ -33,7 +55,8 @@ PRODUCT_MODEL := motorola edge 20
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=berlin_retail \
-    PRIVATE_BUILD_DESC="berlin_global-user 11 S1RG32.53-18-11-7 7be15 release-keys"
+    TARGET_PRODUCT=berlin_global \
+    PRODUCT_NAME="berlin" \
+    PRIVATE_BUILD_DESC="berlin_global-user 12 S1RG32.53-18-11-7 7be15 release-keys"
 
-BUILD_FINGERPRINT := motorola/berlin_global/berlin:11/S1RGS32.53-18-11-7/7be15:user/release-keys
+BUILD_FINGERPRINT := motorola/berlin_global/berlin:12/S1RGS32.53-18-11-7/7be15:user/release-keys
