@@ -22,16 +22,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/motorola/berlin/berlin.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Bootanimation Resolution.
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := derp_berlin
+# GApps
+$(call inherit-product-if-exists, vendor/gapps/config.mk)
+
+#Stuff
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
+
+
+PRODUCT_NAME := cherish_berlin
 PRODUCT_DEVICE := berlin
-PRODUCT_MANUFACTURER := motorola
-PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola edge 20
+PRODUCT_MANUFACTURER := Motorola
+PRODUCT_BRAND := Motorola
+PRODUCT_MODEL := Edge 20
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 

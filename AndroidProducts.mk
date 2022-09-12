@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_berlin.mk
+    $(LOCAL_DIR)/cherish_berlin.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_berlin-user \
-    derp_berlin-userdebug \
-    derp_berlin-eng
+    cherish_berlin-user \
+    cherish_berlin-userdebug \
+    cherish_berlin-eng
