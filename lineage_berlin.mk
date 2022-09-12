@@ -22,12 +22,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/motorola/berlin/berlin.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Bootanimation Resolution.
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := lineage_berlin
+PRODUCT_NAME := derp_berlin
 PRODUCT_DEVICE := berlin
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
