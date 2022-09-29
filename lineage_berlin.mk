@@ -41,7 +41,7 @@ RICE_CHIPSET := Snapdragon 778G
 # Gapps
 WITH_GMS := true
 
-export USE_CCACHE=1 
+# export USE_CCACHE=1 
 
 # maintainer flag 
 RICE_MAINTAINER := NaassomDourado
