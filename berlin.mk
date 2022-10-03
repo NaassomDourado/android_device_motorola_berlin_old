@@ -31,7 +31,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Inherit from motorola sm7325-common
 $(call inherit-product, device/motorola/sm7325-common/sm7325.mk)
 
-$(call inherit-product, vendor/gapps/config.mk)
+$(call inherit-product, vendor/gms/common/common-vendor.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
